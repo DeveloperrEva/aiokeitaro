@@ -21,7 +21,7 @@ setup(
     keywords='python python3 api-client aiohttp api-wrapper keitaro keitaro-tracker keitaro-async',
     project_urls={
         'Source Code': 'https://github.com/developerreva/aiokeitaro',
-        'Documentation': 'https://github.com/ysomad/keitaro#-getting-started',
+        'Documentation': 'https://github.com/developerreva/aiokeitaro#-getting-started',
         'Keitaro Admin API Documentation': 'https://admin-api.docs.keitaro.io/'
     },
     classifiers=[
