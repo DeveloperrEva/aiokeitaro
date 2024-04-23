@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "aiokeitaro"
+version = "0.0.1"
+description = ""
+authors = ["Developereva <developereva@protonmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "^3.8.6"
+pytest = "^6.2.3"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.22.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

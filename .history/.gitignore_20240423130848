@@ -1,0 +1,10 @@
+.eggs
+.pytest_cache
+.vscode
+*.egg-info
+env
+build/
+dist/
+__pycache__/
+setenv.sh
+.DS_Store
