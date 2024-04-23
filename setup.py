@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setup(
     name='aiokeitaro',
-    version='0.0.3',
+    version='1.0.0',
     packages=find_packages(exclude=['tests']),
     install_requires=['aiohttp'],
     package_data={

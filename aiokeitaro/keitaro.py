@@ -36,16 +36,11 @@ class Keitaro:
         """
         Sends HTTP request to Keitaro Admin API
         """
-        print(f'{method} {endpoint}')
-        kwargs_dict = dict(kwargs)
-        print(f'payload: {kwargs_dict.get("data")}')
         url = API.build_url(self.host, Keitaro.api_endpoint, endpoint)
-        print(url)
 
         async with aiohttp.ClientSession() as session:
             async with session.request(
                 method, url, headers={'Api-Key': self.api_key}, *kwargs
             ) as response:
                 data = await response.json()
-                print(f'response: {data}')
                 return data
