@@ -24,10 +24,6 @@ from aiokeitaro import Keitaro
 api = Keitaro('API KEY', 'URL with http or https (if is domain)')
 ```
 
-## ⚙ What can it do
-
-All aiokeitaro functionality is presented in [Google Sheet](https://docs.google.com/spreadsheets/d/1XqRT8XuUG3XfI8GnJMfEKezJmI_3_MllDNermPeUCqA/edit#gid=0)
-
 ## 📚 Examples
 
 If API request was successful, status code 200 will be received and a response in the json format.

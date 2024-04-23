@@ -1,6 +1,7 @@
 .eggs
 .pytest_cache
 .vscode
+.history/
 *.egg-info
 env
 build/

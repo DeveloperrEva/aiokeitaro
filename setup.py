@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setup(
     name='aiokeitaro',
-    version='0.0.2',
+    version='0.0.3',
     packages=find_packages(exclude=['tests']),
     install_requires=['aiohttp'],
     package_data={
@@ -18,7 +18,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/developerreva/aiokeitaro',
-    keywords='python python3 api-client aiohttp api-wrapper keitaro keitaro-tracker',
+    keywords='python python3 api-client aiohttp api-wrapper keitaro keitaro-tracker keitaro-async',
     project_urls={
         'Source Code': 'https://github.com/developerreva/aiokeitaro',
         'Documentation': 'https://github.com/ysomad/keitaro#-getting-started',
