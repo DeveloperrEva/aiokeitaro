@@ -3,6 +3,7 @@ import aiohttp
 
 from .utils import build_host_url
 from .api import API
+from .resources import Affiliate, Campaign
 
 class Keitaro:
     api_endpoint = 'admin_api/v1/'
@@ -36,8 +37,10 @@ class Keitaro:
         Sends HTTP request to Keitaro Admin API
         """
         print(f'{method} {endpoint}')
-        print(f'payload: {kwargs.get("data")}')
+        kwargs_dict = dict(kwargs)
+        print(f'payload: {kwargs_dict.get("data")}')
         url = API.build_url(self.host, Keitaro.api_endpoint, endpoint)
+        print(url)
 
         async with aiohttp.ClientSession() as session:
             async with session.request(

@@ -32,7 +32,7 @@ class API:
         payload = self._build_payload(query_params)
         
         response = await self.client.send_request(
-            method, endpoint, data=json.dumps(payload))
+            method, endpoint)
         
         return response
 

@@ -21,7 +21,7 @@ Begin by importing Keitaro class from aiokeitaro module and passing Admin API ke
 ```python
 from aiokeitaro import Keitaro
 
-api = Keitaro('API key', 'URL')
+api = Keitaro('API KEY', 'URL with http or https (if is domain)')
 ```
 
 ## ⚙ What can it do
@@ -33,11 +33,22 @@ All aiokeitaro functionality is presented in [Google Sheet](https://docs.google.
 If API request was successful, status code 200 will be received and a response in the json format.
 
 ```python
-from aiokeitaro import Keitaro
+import asyncio
+from aiokeitaro import Keitaro, Offer
 
-api = Keitaro('API key', 'URL')
-affnetwork = await api.affnetworks.delete(14)
-print(affnetwork)
+async def main():
+    api = Keitaro('API KEY', 'URL with http or https (if is domain)')
+    
+    # Create an instance of the Offer class
+    offer = Offer(api)
+    
+    # Call the get method on the instance
+    ss = await offer.get()
+    print(ss)
+
+# run main.py
+asyncio.run(main())
+
 ```
 
 <details>
@@ -68,13 +79,13 @@ print(affnetwork)
 To get all offers call get() method without any arguments
 
 ```python
-all_offers = await api.offers.get()
+all_offers = await offer.get()
 ```
 
 Let's try to get a specific offer by its id
 
 ```python
-dummy_offer = await api.offers.get(21)
+dummy_offer = await offer.get(21)
 ```
 
 As a result you'll get a response in JSON format
@@ -126,7 +137,7 @@ payload = {
   'cost_auto': True
 }
 
-campaign = await api.campaigns.create(payload)
+campaign = await campaigns.create(payload)
 ```
 
 The non-asynchronous module is located here: https://github.com/ysomad/keitaro
