@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aiokeitaro"
-version = "1.0.2"
+version = "1.0.1"
 description = ""
 authors = ["Developereva <developereva@protonmail.com>"]
 license = "MIT"
