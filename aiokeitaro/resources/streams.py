@@ -74,7 +74,7 @@ class Stream(API):
         return await super(Stream, self).post(stream_id, 'restore')
 
     async def update(self, stream_id, *, campaign_id, name=None, type=None,
-               action_type=None, schema=None, position=None, weigth=None,
+               action_type=None, action_payload=None, schema=None, position=None, weigth=None,
                action_options=None, comments=None, state=None,
                collect_clicks=None, filter_or=None, filters=None,
                triggers=None, landings=None, offers=None):
