@@ -42,5 +42,8 @@ class Keitaro:
             async with session.request(
                 method, url, headers={'Api-Key': self.api_key}, *kwargs
             ) as response:
-                data = await response.json()
+                if response.content_type == 'application/json':
+                    data = await response.json()
+                else:
+                    data = await response.text()
                 return data

@@ -39,10 +39,16 @@ class Domain(API):
         return await super(Domain, self).post(domain_id, 'restore')
 
     async def update(self, domain_id, *, name=None, is_ssl=None,
-               default_campaign_id=None, state=None, wildcard=None,
+               default_campaign_id=None, group_id=None, state=None, wildcard=None,
                catch_not_found=None, notes=None):
         """
         Updates domain name by id
         """
         return await super(Domain, self).put(
             domain_id, **remove_key_values(locals()))
+
+    async def delete(self, domain_id=None):
+        """
+        Move Domain to Archive A.K.A Delete
+        """
+        return await super(Domain, self).delete(domain_id)
